@@ -57,3 +57,64 @@ h2::after {
   color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
+/* ================= MOBILE RESPONSIVE FIX ================= */
+
+/* Make layout flexible */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Navbar fix */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Make nav links wrap on small screens */
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Cards responsive */
+.card {
+  width: 100%;
+}
+
+/* Text alignment for mobile */
+h2 {
+  text-align: center;
+}
+
+/* ================= MEDIA QUERY ================= */
+@media (max-width: 768px) {
+
+  /* Stack navbar items */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Reduce heading size */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust card spacing */
+  .card {
+    margin-bottom: 20px;
+  }
+
+  /* Buttons full width */
+  .btn {
+    width: 100%;
+  }
+
+  /* Improve spacing */
+  section {
+    padding: 20px 10px;
+  }
+}
