@@ -1,0 +1,59 @@
+/* Custom Vibrant Theme */
+:root {
+  --primary-color: #6366f1;   /* Indigo */
+  --secondary-color: #ec4899; /* Pink */
+  --accent-color: #06b6d4;    /* Cyan */
+  --bg-gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Navbar Color */
+.navbar {
+  background: var(--bg-gradient) !important;
+}
+
+/* Section Headings */
+h2 {
+  color: var(--primary-color);
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: '';
+  width: 50px;
+  height: 4px;
+  background: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Card Enhancements */
+.card {
+  border: none;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-outline-primary {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
